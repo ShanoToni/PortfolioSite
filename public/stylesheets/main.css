@@ -1,0 +1,110 @@
+.primary{
+    color: #8dee3e
+}
+.secondary{
+    color: #222629
+}
+.jumbotron{
+    background-color: #222629;
+    color: #61892f;
+    z-index: 1;
+    position: relative;
+}
+hr{
+     border-color: #8dee3e;
+}
+/* .warning{
+    color: #61892f;
+} */
+.dark{
+    color: #474b4f
+}
+.light{
+    color: #6b6370
+}
+
+a{
+    color: white;
+}
+
+a:hover{
+    color: #8dee3e
+}
+label{
+    color: #8dee3e;
+}
+
+body{
+    padding-top: 40px;
+    background: #000000;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #000000, #095509);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #000000, #084e08); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-family: 'Roboto', sans-serif;
+}
+
+#cardBtn{
+    width: 100%;
+    background-color: #61892f;
+    margin: 0;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    color: white;
+    
+    text-transform: uppercase;
+}
+
+.card-img-top{
+    width: 100%;
+    height: 30vh;
+    object-fit: cover;
+}
+#cardBtn:hover{
+    background-color: #8dee3e;
+}
+.card-body{
+    padding: 0;
+    border: none;
+}
+.card{
+    border: none;
+    background-color: black;
+}
+.span{
+    color: #8dee3e;
+    font-weight: 700;
+}
+#mainNavBar{
+    font-size: 1.5rem;
+    font-weight: 200;
+    margin-bottom: 4rem;
+}
+
+#mainNavBar .nav-link{
+    color: white;
+    font-size: 1.1rem;
+}
+
+#mainNavBar .nav-link:hover{
+    color: #8dee3e;
+}
+
+#mainNavBar .navbar-brand{
+    color: #61892f;
+    font-size: 1.5rem;
+}
+#delete-form{
+    display: inline;
+}
+
+.navbar.scrolled{
+    background:#222629;
+    transition:  background 700ms;
+}
+.heading{
+    color: #8dee3e;
+    font-size: 4rem;
+}
+.description{
+    color: #517426;
+    font-size: 1.5rem;
+}

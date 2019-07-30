@@ -11,33 +11,31 @@
     <link rel="stylesheet" href="/stylesheets/main.css">
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/f8eef3ad52.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet">
+    <!-- Animations Because -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
   </head>
   <body>
   
-  <nav class="navbar navbar-expand-md navbar-default bg-light">
-    <div class="container-fluid">
-
-        <div class="navbar-header">
-            <a class="navbar-brand" href="/">ShanoCode</a>
-        </div>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navLinks" aria-controls="navLinks" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"> <i class="fas fa-bars"></i> </span>
-          </button>
-        <div class="collapse navbar-collapse " id="navLinks">
-          <ul class="nav navbar-nav ml-auto ">
-            <% if(!currentUser) {%>
-              <li><a class="nav-link" href="/login">Login</a> </li>
-              <li><a class="nav-link" href="/register">Register</a> </li>
-            <% } else {%>
-              <li><a class="navbar-text" >Signed In As: <%= currentUser.username %></a> </li>
-              <li><a class="nav-link" href="/logout">Logout</a> </li>
-              <%}%>
+  <nav class="navbar navbar-dark navbar-expand-md fixed-top py-0" id="mainNavBar">
+      <a href="/projects"class="navbar-brand">Shano<span class="span">/</span>Code</a>
+      <button class="navbar-toggler" data-toggle="collapse" data-target="#navLinks" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navLinks">
+          <ul class="navbar-nav">
+              <li class="nav-item">
+                  <a href="/projects" class="nav-link">PROJECTS</a>
+              </li>
+              <li class="nav-item">
+                  <a href="#" class="nav-link">ABOUT ME</a>
+              </li>
+              <li class="nav-item">
+                  <a href="#" class="nav-link">CONTACT ME</a>
+              </li>
           </ul>
-        </div>
-
-    </div>
-
+      </div>
   </nav>
-
+  
   
   
