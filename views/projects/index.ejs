@@ -1,0 +1,15 @@
+<% include ../partials/header %>
+<h1>yey web page!</h1>
+
+<a href="/projects/new">Add new project</a>
+
+<ul>
+    <% projects.forEach((project) =>{ %>
+        <li> <%=project.title %></li>
+        <a href="/projects/<%= project._id %>">See more</a>
+    <% }) %>
+</ul>
+
+<% include ../partials/footer %>
+
+

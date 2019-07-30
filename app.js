@@ -1,3 +1,4 @@
+//Initial requires
 const express                       = require("express");
 const app                           = express();
 const bodyParser                    = require("body-parser");
@@ -7,13 +8,16 @@ const localStrategy                 = require("passport-local");
 const methodOverride                = require("method-override");
 const connectFlash                  = require("connect-flash");
 
+//DB
+const Project                       = require("./models/project");
 
 //add the routes later
-
+const projectRoutes                 = require("./routes/projects");
 
 
 //connect to the DB
-mongoose.connect('mongodb+srv://shano:tFS-4FV-BbT-h9a@cluster0-andyp.mongodb.net/yelpCamp?retryWrites=true&w=majority', {useNewUrlParser: true});
+mongoose.connect('mongodb+srv://shano:tFS-4FV-BbT-h9a@cluster0-andyp.mongodb.net/shanoCode?retryWrites=true&w=majority', {useNewUrlParser: true});
+
 
 
 //set up the app
@@ -47,11 +51,13 @@ app.use((req,res,next)=>{
 app.set("view engine", "ejs");
 
 //use the routes here
+//app.use("/", indexRoutes);
+app.use("/projects",projectRoutes);
 
 
 
 app.get("*", (req,res)=>{
-    res.send("Awesome Hooked Up!");
+    res.redirect("/projects");
 })
 
 //start the server
