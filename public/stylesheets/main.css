@@ -10,6 +10,9 @@
     z-index: 1;
     position: relative;
 }
+h1{
+    color: #8dee3e;
+}
 hr{
      border-color: #8dee3e;
 }
@@ -107,4 +110,9 @@ body{
 .description{
     color: #517426;
     font-size: 1.5rem;
+}
+
+#showContainer{
+    margin: 0 10%;
+    max-width: 80%;
 }

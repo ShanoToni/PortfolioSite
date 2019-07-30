@@ -10,10 +10,11 @@ const connectFlash                  = require("connect-flash");
 
 //DB
 const Project                       = require("./models/project");
+const User                         = require("./models/user");
 
 //add the routes later
 const projectRoutes                 = require("./routes/projects");
-
+const indexRoutes                   = require("./routes/index");
 
 //connect to the DB
 mongoose.connect('mongodb+srv://shano:tFS-4FV-BbT-h9a@cluster0-andyp.mongodb.net/shanoCode?retryWrites=true&w=majority', {useNewUrlParser: true});
@@ -36,9 +37,9 @@ app.use(require("express-session")({
 app.use(passport.initialize());
 app.use(passport.session());
 
-// passport.use(new localStrategy(Admin.authenticate()));
-// passport.serializeUser(Admin.serializeUser());
-// passport.deserializeUser(Admin.deserializeUser());
+ passport.use(new localStrategy(User.authenticate()));
+ passport.serializeUser(User.serializeUser());
+ passport.deserializeUser(User.deserializeUser());
 
 //set up globals for the app
 app.use((req,res,next)=>{
@@ -51,7 +52,7 @@ app.use((req,res,next)=>{
 app.set("view engine", "ejs");
 
 //use the routes here
-//app.use("/", indexRoutes);
+app.use("/", indexRoutes);
 app.use("/projects",projectRoutes);
 
 
@@ -62,7 +63,8 @@ app.get("*", (req,res)=>{
 
 //start the server
 
-const port = process.env.PORT || 3000
-app.listen(port, ()=>{
-    console.log("Server is started!");
+var server_port = process.env.YOUR_PORT || process.env.PORT || 80;
+var server_host = process.env.YOUR_HOST || '0.0.0.0';
+app.listen(server_port, server_host, function() {
+    console.log('Listening on port %d', server_port);
 });

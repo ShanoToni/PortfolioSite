@@ -1,0 +1,23 @@
+<% include ./partials/header %>
+
+<div class="container" style="max-width: 600px;">
+    <h1>This is only for myself!</h1>
+        <form action="/login" method="post">
+            <div class="form-group">
+              <label for="">UserName:</label>
+              <input type="text" class="form-control" name="username" id="" aria-describedby="helpId" placeholder="">
+              
+            </div>
+            <div class="form-group">
+                <label for="">PassWord:</label>
+                <input type="password" class="form-control" name="password" id="" aria-describedby="helpId" placeholder="">
+                </div>
+                <div class="form-group">
+            <button type="submit " class="btn btn-success btn-block">Submit</button>
+        </div>  
+        </form>
+</div>
+
+<% include ./partials/footer %>
+
+

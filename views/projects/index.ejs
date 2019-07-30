@@ -9,10 +9,11 @@
 </div>
 
 
-
+<% if(currentUser){ %>
 <div class="container mb-4">  
         <a href="/projects/new">Add new project</a>  
 </div>
+<% } %>
 <div class="container">  
     <div class="row">
         <% projects.forEach((project) =>{ %>
@@ -27,7 +28,15 @@
         <% }) %>
     </div>
 </div>
- 
+ <div class="container-fuild text-right">
+        <% if(currentUser){ %>
+            <a class="text-right" href="/register">Register</a>     
+            <a class="text-right" href="/logout">Logout</a>     
+        <% } else{ %>
+        <a class="text-right" href="/login">Login</a> 
+        <% } %>
+ </div>
+
 
 
 <% include ../partials/footer %>

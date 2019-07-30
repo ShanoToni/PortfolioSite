@@ -1,7 +1,7 @@
 const express                   = require("express");
 const router                    = express.Router({mergeParams:true});
 const Project                   = require("../models/project");
-
+const middleware                = require("../middleware/index");
 //index route
 router.get("/", (req,res) =>{
     Project.find({} , (err, projects) =>{
@@ -17,11 +17,11 @@ router.get("/", (req,res) =>{
 
 //Create Route
 //form get
-router.get("/new", (req,res)=>{
+router.get("/new", middleware.isLoggedIn, (req,res)=>{
     res.render("projects/new");
 });
 //Create post
-router.post("/", (req,res)=>{
+router.post("/", middleware.isLoggedIn, (req,res)=>{
     
     //create the project
     let projTitle = req.body.title;
@@ -57,7 +57,7 @@ router.get("/:id", (req,res) =>{
 });
 
 //Edit form Route
-router.get("/:id/edit", (req,res) =>{
+router.get("/:id/edit", middleware.isLoggedIn, (req,res) =>{
     Project.findById(req.params.id, (err, foundProject)=>{
         if(err){
             console.log(err);
@@ -69,7 +69,7 @@ router.get("/:id/edit", (req,res) =>{
 })
 
 //Update Route
-router.put("/:id" , (req, res) =>{
+router.put("/:id" , middleware.isLoggedIn, (req, res) =>{
     //empty old images
     Project.findByIdAndUpdate(req.params.id, req.body.Project, (err, updated)=>{
         if(err){
@@ -105,7 +105,7 @@ router.put("/:id" , (req, res) =>{
    
 })
 //Delete Route
-router.delete("/:id", (req,res) =>{
+router.delete("/:id", middleware.isLoggedIn, (req,res) =>{
     Project.findByIdAndDelete(req.params.id, (err)=>{
         if(err){
             console.log(err);

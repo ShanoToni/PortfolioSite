@@ -18,7 +18,11 @@
   <body>
   
   <nav class="navbar navbar-dark navbar-expand-md fixed-top py-0" id="mainNavBar">
+        <% if(currentUser){ %>
+        <a href="/projects"class="navbar-brand">Shano<span class="span">/</span>Is<span class="span">/</span>Here!</a>
+            <% }else{ %>
       <a href="/projects"class="navbar-brand">Shano<span class="span">/</span>Code</a>
+      <% } %>
       <button class="navbar-toggler" data-toggle="collapse" data-target="#navLinks" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
       </button>
