@@ -1,0 +1,29 @@
+<% include ./partials/header %>
+
+<div class="container" style="max-width: 600px;">
+    <h1>I'd like to hear from you!</h1>
+        <form action="/contactme" method="post">
+            <div class="form-group">
+              <label for="">Name:</label>
+              <input type="text" class="form-control" name="name" id="" aria-describedby="helpId" placeholder="" required>
+            </div>
+            <div class="form-group">
+                <label for="">Subject:</label>
+                <input type="text" class="form-control" name="subject" id="" aria-describedby="helpId" placeholder="" required>
+            </div>
+            <div class="form-group">
+                <label for="">Email:</label>
+                <input type="text" class="form-control" name="email" id="" aria-describedby="helpId" placeholder="" required>
+            </div>
+            <div class="form-group">
+              <label for="">Message:</label>
+              <textarea class="form-control" name="text" id="" rows="8" required></textarea>
+            </div>
+            <button type="submit " class="btn btn-success btn-block">Submit</button>
+        </div>  
+        </form>
+</div>
+
+<% include ./partials/footer %>
+
+

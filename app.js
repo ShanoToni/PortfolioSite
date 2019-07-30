@@ -15,6 +15,7 @@ const User                         = require("./models/user");
 //add the routes later
 const projectRoutes                 = require("./routes/projects");
 const indexRoutes                   = require("./routes/index");
+const contactRoutes                 = require("./routes/contactme");
 
 //connect to the DB
 mongoose.connect('mongodb+srv://shano:tFS-4FV-BbT-h9a@cluster0-andyp.mongodb.net/shanoCode?retryWrites=true&w=majority', {useNewUrlParser: true});
@@ -54,7 +55,7 @@ app.set("view engine", "ejs");
 //use the routes here
 app.use("/", indexRoutes);
 app.use("/projects",projectRoutes);
-
+app.use("/contactme", contactRoutes);
 
 
 app.get("*", (req,res)=>{
