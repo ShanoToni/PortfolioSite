@@ -4,7 +4,7 @@ const Project                   = require("../models/project");
 const middleware                = require("../middleware/index");
 //index route
 router.get("/", (req,res) =>{
-    Project.find({} , (err, projects) =>{
+    Project.find({}).sort({date:-1}).exec((err, projects) =>{
         if(err){
             console.log(err);
             //HANDLE ERRORS HERE-------------------------------------------------------------------
