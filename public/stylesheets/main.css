@@ -43,8 +43,30 @@ body{
     background: -webkit-linear-gradient(to right, #000000, #095509);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #000000, #084e08); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     font-family: 'Roboto', sans-serif;
+    
 }
 
+.logo{
+    width: 180px;
+  height: 180px;
+  position: relative;
+}
+.fixed {
+    position: fixed;
+    top: 88%;
+}
+.logo::after {
+    content: "";
+    background: url(https://i.imgur.com/Lnm1hrz.png?1);
+    background-repeat: no-repeat;
+    opacity: 0.8;
+    top: -20px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;   
+  }
 #cardBtn{
     width: 100%;
     background-color: #61892f;

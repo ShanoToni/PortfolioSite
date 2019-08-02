@@ -44,6 +44,11 @@ router.get("/logout", (req,res)=>{
     res.redirect("/projects");
 });
 
+//about page
+router.get("/about" , (req,res) =>{
+    res.render("about");
+})
+
 
 
 module.exports = router;

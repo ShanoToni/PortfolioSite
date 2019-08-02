@@ -22,10 +22,10 @@
 <% for(let i=0;i< project.images.length; i++){ %>
     <% if(i%2==1) {%>
     <div class="row align-items-center mb-4 animated fadeInUp slow ">
-        <div class="col-md-6 order-md-2 order-sm-1">
+        <div class="col-md-6 order-md-2 order-sm-2 order-xs-2">
             <img class="img-fluid" src="<%=project.images[i].img%>" alt="No image" >
         </div> 
-        <div class="col-md-6 order-sm-2 order-md-1">
+        <div class="col-md-6 order-md-1 order-sm-1 order-xs-1">
             <div class="row justify-content-center">
                     <p class="text-center description"><%= project.images[i].description %></p>
             </div>
@@ -33,14 +33,14 @@
     </div>
     <% } else { %>
         <div class="row align-items-center mb-4 animated fadeInUp slow">
-                <div class="col-md-6 order-sm-2">
+                <div class="col-md-6 order-md-1 order-sm-1 order-xs-1">
+                    <img class="img-fluid" src="<%=project.images[i].img%>" alt="No image" >
+                </div> 
+                <div class="col-md-6 order-md-2 order-sm-2 order-xs-2">
                     <div class="row justify-content-center">
                             <p class="text-center description"><%= project.images[i].description %></p>
                     </div>
                 </div>      
-                <div class="col-md-6 ">
-                    <img class="img-fluid" src="<%=project.images[i].img%>" alt="No image" >
-                </div> 
             </div>
     <% } %>
 <% } %>
