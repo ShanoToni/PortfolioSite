@@ -15,7 +15,7 @@
             <h1 class="text-center heading animated zoomInDown slow"><%=project.title %></h1>
         </div> 
         <div class="col-md-6 ">
-            <p class="text-center description animated zoomInUp slow"><%=project.description %></p>
+            <p class="text-center description animated zoomInUp slow"><%- project.description %></p>
         </div>      
     </div>
 
@@ -27,7 +27,7 @@
         </div> 
         <div class="col-md-6 order-md-1 order-sm-1 order-xs-1">
             <div class="row justify-content-center">
-                    <p class="text-center description"><%= project.images[i].description %></p>
+                    <p class="text-center description"><%- project.images[i].description %></p>
             </div>
         </div>      
     </div>
@@ -38,7 +38,7 @@
                 </div> 
                 <div class="col-md-6 order-md-2 order-sm-2 order-xs-2">
                     <div class="row justify-content-center">
-                            <p class="text-center description"><%= project.images[i].description %></p>
+                            <p class="text-center description"></p><%- project.images[i].description %></p>
                     </div>
                 </div>      
             </div>

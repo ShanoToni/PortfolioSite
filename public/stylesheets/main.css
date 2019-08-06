@@ -45,6 +45,33 @@ body{
     font-family: 'Roboto', sans-serif;
     
 }
+.matrix {
+    position: relative;
+    color: #517426;
+}
+
+.matrix:before, .matrix:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    border: 1px solid #000;
+    width: 6px;
+    height: 100%;
+}
+.matrix:before {
+    left: -6px;
+    border-right: 0px;
+    border-color: #517426;
+}
+.matrix:after {
+    right: -6px;
+    border-left: 0px;
+    border-color: #517426;
+}
+.matrix td {
+    padding: 5px;    
+    text-align: center;
+}
 
 .logo{
     width: 180px;
